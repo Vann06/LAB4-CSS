@@ -1,0 +1,29 @@
+
+
+body {  
+    background-color: #feffc7;
+}
+
+
+/*https://css-shape.com/grid-lines/*/
+.grid-lines{
+    --s: 60px;
+    --t: 5px;
+
+    width: 200vw;
+    height: 200vh;
+
+    background: conic-gradient(
+        from 90deg at var(--t) var(--t),
+        transparent 25%, #ddf1b4 0
+    ) 0 0 /var(--s) var(--s);
+    
+    animation: moveGrid 5s linear infinite;
+
+}
+
+@keyframes moveGrid {
+    100% {
+        transform: translate(-40px, -40px);
+    }
+}
