@@ -51,11 +51,12 @@ body {
     background-color: orange ;
 }
 
+/*HEAD PARTS*/
 .head{
     width: 140px;
     height: 130px;
     background-color: #f5ad2c;
-    border-radius: 50% 50% 50% 40% / 50% 60% 45% 50%;
+    border-radius: 50% 50% 40% 40% / 50% 60% 45% 50%;
     border: 3px solid #621103;
     border-bottom: none;
     position: absolute;
@@ -63,7 +64,57 @@ body {
     right: 100px;
 }
 
+.right-eye{
+    width: 50px;
+    height: 70px;
+    background-color: #fef7cd;
+    border-radius: 90% 70% 60% 90% ;
+    transform: rotate(10deg);
+    border: 2px solid #621103;
+    border-right: none;
+    position: absolute;
+    top: 30px;
+    right: 43px;
+}
 
+.right-iris{
+    width: 18px;
+    height: 26px;
+    background-color: #621103;
+    border-radius: 60% 50% 60% 60% ;
+    transform: rotate(-2deg);
+    position: absolute;
+    top: 22px;
+    right: 4px;
+}
+
+.left-eye{
+    width: 50px;
+    height: 70px;
+    background-color: #fef7cd;
+    border-radius: 80% 70% 60% 60% ;
+    transform: rotate(-9deg);
+    border: 2px solid #621103;
+    position: absolute;
+    top: 30px;
+    right: 4px;
+}
+
+.left-iris{
+    width: 18px;
+    height: 26px;
+    background-color: #621103;
+    border-radius: 60% 60% 60% 60% ;
+    transform: rotate(2deg);
+    position: absolute;
+    top: 23px;
+    right: 13px;
+}
+
+
+
+
+/*BODY PARTS*/
 .body{
     width: 100px;
     height: 80px;
@@ -85,8 +136,8 @@ body {
     align-items: center;
 }
 
-.upper-leg{
-    width: 25px;
+.u-left-leg{
+    width: 20px;
     height: 20px;
     background-color: #f7aa2e;
     border: 2px solid #621103;
@@ -95,6 +146,21 @@ body {
     position: relative;
     z-index: 2;
 }
+
+.u-left-leg::before{
+    content: "";
+    width: 14px;
+    height: 20px;
+    background-color: #f7aa2e;
+    border: 2px solid #621103;
+    transform: rotate(-9deg);
+    border-top: none;
+    border-bottom: none;
+    position: absolute;
+    z-index: inherit;
+    left: 27px;
+}
+
 .paw{
     width: 40px;
     height: 35px;
@@ -121,11 +187,107 @@ body {
 .paw::after{
     content: "";
     position: absolute;
-    bottom: 0px; /* Moves it further down */
+    bottom: 0px;
     left: 70%;
     transform: translateX(-50%);
     width: 2.5px;
     height: 12px;
     background-color: #621103;
     border-radius: 3px;
+}
+
+.right-paw{
+    width: 42px;
+    height: 35px;
+    background-color: #f7aa2e;
+    border-radius: 80% 70% 60% 70% ;
+    border: 3px solid #621103;
+    transform: rotate(-20deg);
+    position: absolute;
+    bottom: -27px;
+    left: 20px;
+}
+
+.right-paw::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 10px;
+    background-color: #621103;
+    border-radius: 2px;
+}
+
+.right-paw::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 2.5px;
+    height: 12px;
+    background-color: #621103;
+    border-radius: 3px;
+}
+
+
+.back-paw-left{
+    width: 40px;
+    height: 50px;
+    background-color: #f7aa2e;
+    border-radius: 50% ;
+    border: 3px solid #621103;
+    transform: rotate(-20deg);
+    position: absolute;
+    bottom: -10px;
+    left: -8px;
+}
+
+.back-paw-left::before{
+    content: "";
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 10px;
+    background-color: #621103;
+    border-radius: 2px;
+}
+
+.back-paw-left::after{
+    content: "";
+    position: absolute;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 12px;
+    background-color: #621103;
+    border-radius: 2px;
+    transform: rotate();
+}
+
+.back-paw-right{
+    width: 40px;
+    height: 50px;
+    background-color: #da9629;
+    border-radius: 50% ;
+    border: 3px solid #621103;
+    transform: rotate(20deg);
+    position: absolute;
+    bottom: -10px;
+    left: 80px;
+    z-index: -1;
+}
+
+.back-paw-right::before{
+    content: "";
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 10px;
+    background-color: #621103;
+    border-radius: 2px;
 }
