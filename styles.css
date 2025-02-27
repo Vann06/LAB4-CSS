@@ -13,7 +13,7 @@ body {
 /*https://css-shape.com/grid-lines/*/
 .grid-lines{
     --s: 40px;
-    --t: 5px;
+    --t: 5px; 
 
     width: 200vw;
     height: 200vh;
@@ -68,12 +68,24 @@ body {
     clip-path: polygon(29% 73%, 14% 11%, 40% 45%, 63% 10%, 49% 73%);
     width: 50px;
     height: 50px;
-    background-color: #f5ad2c;
-    outline: 5px solid #621103;
+    background-color: #621103;
     position: absolute;
     top: 37px;
     left: 305px;
     z-index: 2;
+}
+
+.hair::before{
+    content: "";
+    clip-path: polygon(29% 73%, 14% 11%, 40% 45%, 63% 10%, 49% 73%);
+    width: 50px;
+    height: 55px;
+    background-color: #f5ad2c;
+    position: absolute;
+    top: 4px;
+    left: 0px;
+    z-index: 6;
+
 }
 
 .stripes {
@@ -152,32 +164,44 @@ body {
 }
 
 .whiska-f{
-    clip-path: polygon(21% 32%, 36% 13%, 68% 71%, 64% 73%);
     width: 60px;
     height: 60px; 
-    background-color: #621103;
     position: absolute;
     transform: rotate(-24deg);
     left: -17px;
     top: -13px;
 }
 
-.whiska-f:nth-child(1){
-    top: -18px;
-    right: 49px;
+
+.whiska{
+    background-color: #621103;
+    width: 60px;
+    height: 60px; 
+    clip-path: polygon(21% 32%, 36% 13%, 68% 71%, 64% 73%);
+    border-radius: 90% 40% 20% 20%;
+    transform: rotate(10deg);
+    position: absolute;
+}
+
+.whiska:nth-child(1){
+    top: 0px;
+    right: 0px;
 
 }
-.whiska-f:nth-child(2){
-    top: -40px;
-    right: 49px;
+.whiska:nth-child(2){
+    position:relative;
+    top: 4px;
+    right: 20px;
+    transform: rotate(-2deg);
 
 }
+.whiska:nth-child(3){
+    position:relative;
+    top: -45px;
+    right: 30px;
+    transform: rotate(-25deg);
 
-
-
-
-
-
+}
 
 
 .right-eye{
@@ -440,7 +464,7 @@ body {
 }
 
 
-.left-ear{
+.left-ear, .right-ear {
     width: 40px;
     height: 38px;
     background-color: #f5ad2c;
@@ -448,26 +472,47 @@ body {
     border: 3px solid #621103;
     border-bottom: none;
     position: absolute;
-    transform: rotate(-7deg);
     top: 15%;
-    left: 270px;
-    z-index: 2;
 }
 
-.right-ear{
-    width: 40px;
-    height: 38px;
-    background-color: #f5ad2c;
-    border-radius: 100% 30% 0% 0%;
-    border: 3px solid #621103;
-    border-bottom: none;
+.left-ear { transform: rotate(-7deg); left: 270px; z-index: 2; }
+.right-ear { transform: rotate(8deg); left: 340px; z-index: -1; }
+
+
+.left-ear::before, .right-ear::before {
+    content: "";
     position: absolute;
-    transform: rotate(8deg);
-    top: 15%;
-    left: 340px;
-    z-index: -1;
-
+    width: 7px;
+    height: 35px;
+    background-color: #561804;
+    border-radius: 50%;
+    top: px;
+    left: 30px;
 }
+
+.left-ear::after, .right-ear::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 34px;
+    background-color: #561804;
+    border-radius: 50%;
+    transform: rotate(10deg);
+    top: 2px;
+    left: 23px;
+}
+
+.oval {
+    position: absolute;
+    width: 6px;
+    height: 30px;
+    background-color: #561804;
+    transform: rotate(20deg);
+    border-radius: 50%;
+    top: 6px;
+    left: 17px;
+}
+
 
 
 .mouth-r{
