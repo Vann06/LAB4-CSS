@@ -44,9 +44,55 @@ body {
     top: 50%;
 }
 
+.container p {
+    position: relative;
+    font-family:Comic Sans MS, Comic Sans, cursive;
+    top: 20px;
+    left: 90%;
+    transform: translateX(-50%); 
+    font-size: 24px;
+    font-weight: bold;
+    color: #621103;
+}
+
+.star {
+    font-size: 60px;
+    color: #561804;
+    position: absolute;
+}
+
+/* Each star is positioned separately */
+.star1 { top: 50px; left: 180px; transform: rotate(10deg); }
+.star2 { top: 0px; left: 390px; transform: rotate(-15deg); }
+.star3 { top: 130px; left: 160px; transform: rotate(5deg); }
+.star4 { top: 200px; left: 400px; transform: rotate(-20deg); }
+
+.icon1{
+    clip-path: polygon(58% 17%, 81% 13%, 80% 41%, 53% 34%, 47% 45%, 71% 60%, 54% 78%, 40% 51%);
+    width: 60px;
+    height: 40px;
+    background-color: #561801;
+    border:2px solid #561804;
+    position: absolute;
+    top: 130px;
+    left: 380px;
+}
+
+.icon2{
+    clip-path: polygon(25% 37%, 45% 25%, 68% 68%, 38% 86%);
+    width: 30px;
+    height: 30px;
+    background-color: #561801;
+    border:2px solid #561804;
+    position: absolute;
+    top: 145px;
+    left: 390px;
+}
+
 .cat{
     background-color: orange ;
 }
+
 
 
 /*HEAD PARTS*/
@@ -579,3 +625,40 @@ body {
 
 
 
+/* TAIL ayuda*/
+.tail{
+    width: 100px;
+    height: 100px;
+    border-top: none;
+    position: absolute;
+    top: 180px;
+    right: 210px;
+    z-index: -1;
+}
+
+.square{
+    width: 20px;
+    height: 20px;
+    background-color: #cf7032;
+    border: 3px solid #561804;
+    border-top: none;
+    border-bottom: none;
+    transform: rotate(-50deg);
+    position: absolute;
+    top:20px;
+    right: 9px;
+    z-index: 2;
+}
+
+
+.tail-1{
+    width: 60px;
+    height: 50px;
+    background-color: #f5ad2c;
+    border: 3px solid #561804;
+    border-radius: 50%;
+    transform: rotate(-20deg);
+    position: absolute;
+    top:0px;
+    right: 20px;
+}
