@@ -315,6 +315,7 @@ body {
     border-radius: 2px;
 }
 
+
 .left-ear{
     width: 40px;
     height: 38px;
@@ -328,3 +329,79 @@ body {
     left: 270px;
     z-index: 2;
 }
+
+.right-ear{
+    width: 40px;
+    height: 38px;
+    background-color: #f5ad2c;
+    border-radius: 100% 30% 0% 0%;
+    border: 3px solid #621103;
+    border-bottom: none;
+    position: absolute;
+    transform: rotate(8deg);
+    top: 15%;
+    left: 340px;
+    z-index: -1;
+
+}
+
+
+.mouth-r{
+    width: 15px;
+    height: 23px;
+    background-color: #f7d765;
+    display: block;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    transform: rotate(-230deg);
+    border: 2px solid #561804;
+    border-bottom: none;
+    border-right: none;
+    left: 94px;
+    top: 90px;
+    position: absolute
+}
+
+.mouth-l{
+    width: 15px;
+    height: 23px;
+    background-color: #f7d765;
+    display: block;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border: 2px solid #561804;
+    transform: rotate(230deg);
+    left: 76px;
+    top: 90px;
+    position: absolute
+}
+
+.nose-container {
+    position: absolute;
+    left: 82px;
+    top: 85px;
+    transform: scale(0.09);
+    transform-origin: center top; 
+    z-index: 2;
+}
+
+
+/* En esto por ahora me ayudo chatio :(( no se como hacerlo*/
+.nose {
+    --s: 0.8; 
+    --r: calc(40px * var(--s)); 
+    background-color: #E97B58;
+    width: calc(300px * var(--s)); 
+    aspect-ratio: 1/cos(30deg);
+    mask:
+      conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2),#000 60deg,#0000 0)
+       0 100%/100% calc(100% - 3*var(--r)/2) no-repeat,
+      radial-gradient(var(--r) at 50% calc(2*var(--r)),#000 98%,#0000 101%),
+      radial-gradient(var(--r),#000 98%,#0000 101%) space no-repeat
+       0 100%/calc(2*tan(60deg)*var(--r)) calc(2*var(--r));
+    clip-path: polygon(50% 0,100% 100%,0 100%);
+    position: absolute;
+    transform: rotate(180deg);
+}
+
+
