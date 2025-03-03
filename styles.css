@@ -303,7 +303,12 @@ body {
 
 
 
-/*BODY PARTS*/
+/*BODY PARTS
+
+justificaion de flex:
+permite que los elementos dentro del cuerpo
+se organicen de manera fluida, evitando 
+posiciones absolutas innecesarias. */
 .body{
     display: flex;
     width: clamp(100px, 10vw, 80px);
@@ -329,6 +334,7 @@ body {
     right: 10px;
 }
 
+/*uso de flex ya que organiza la pierna y la pata de manera vertical.*/
 .front-leg{
     position: absolute;
     top: 40px;
@@ -364,7 +370,7 @@ body {
 }
 
 .paw{
-    box-shadow: 2px 2px 3px rgba(101, 54, 20, 0.3);
+    filter: drop-shadow(3px 3px 2px #8155134d);
     width: 45px;
     height: 40px;
     background-color: #f7aa2e;
@@ -595,7 +601,7 @@ body {
 }
 
 
-/* Uso de mask */
+/* Uso de mask en la nariz */
 .nose {
     --s: 0.8; 
     --r: calc(40px * var(--s)); 
