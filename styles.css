@@ -37,7 +37,6 @@ body {
 .container{
     height: 300px;
     width: 500px;
-    border: 1px solid black;
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -46,7 +45,7 @@ body {
 
 .container p {
     position: relative;
-    font-family:Comic Sans MS, Comic Sans, cursive;
+    font-family:Comic Sans MS, Comic Sans;
     top: 20px;
     left: 90%;
     transform: translateX(-50%); 
@@ -92,8 +91,6 @@ body {
 .cat{
     background-color: orange ;
 }
-
-
 
 /*HEAD PARTS*/
 .head{
@@ -196,7 +193,7 @@ body {
 .whisker {
     width: 30px;
     height: 8px; 
-    background-color: #621103;
+    background: #621103;
     position: absolute;
     transform: rotate(-0deg);
     border-radius: 90% 40% 20% 20%;
@@ -220,13 +217,13 @@ body {
 
 
 .whiska{
-    background-color: #621103;
+    position: absolute;
+    background: #621103;
     width: 60px;
     height: 60px; 
     clip-path: polygon(21% 32%, 36% 13%, 68% 71%, 64% 73%);
-    border-radius: 90% 40% 20% 20%;
+    border-radius: 100% 100% 0 0;
     transform: rotate(10deg);
-    position: absolute;
 }
 
 .whiska:nth-child(1){
@@ -248,7 +245,6 @@ body {
     transform: rotate(-25deg);
 
 }
-
 
 .right-eye{
     width: 50px;
@@ -559,8 +555,6 @@ body {
     left: 17px;
 }
 
-
-
 .mouth-r{
     width: 15px;
     height: 23px;
@@ -601,7 +595,7 @@ body {
 }
 
 
-/* En esto por ahora me ayudo chatio :(( no se como hacerlo*/
+/* Uso de mask */
 .nose {
     --s: 0.8; 
     --r: calc(40px * var(--s)); 
@@ -622,7 +616,6 @@ body {
 .nose ~ .mouth-l {
     opacity: 0.9;
 }
-
 
 
 /* TAIL ayuda*/
@@ -647,18 +640,65 @@ body {
     position: absolute;
     top:20px;
     right: 9px;
-    z-index: 2;
 }
 
 
 .tail-1{
-    width: 60px;
+    width: 65px;
     height: 50px;
     background-color: #f5ad2c;
     border: 3px solid #561804;
     border-radius: 50%;
     transform: rotate(-20deg);
     position: absolute;
-    top:0px;
+    top:-1px;
     right: 20px;
 }
+
+.tail-1::before{
+    content: "";
+    width: 38px;
+    height: 33px;
+    background-color: #cf7032;
+    border-radius: 50%;
+    transform: rotate(-60deg);
+    position: absolute;
+    top:7px;
+    right: -2px;
+}
+
+.tail-stripes {
+    clip-path: polygon(48% 2%, 12% 9%, 36% 20%, 17% 37%, 43% 34%, 36% 65%, 56% 49%, 57% 79%, 67% 29%, 48% 43%, 57% 18%, 37% 28%, 51% 12%, 33% 10%);
+    width: 45px;
+    height: 45px;
+    background: #561801;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+}
+
+.tail-stripes-2{
+    content: "";
+    clip-path: polygon(58% 7%, 31% 17%, 67% 32%, 41% 43%, 66% 55%, 26% 49%, 44% 30%, 11% 14%);
+    width: 40px;
+    height: 40px;
+    background: #561801;
+    position: absolute;
+    top: 0px;
+    left: 50px;
+}
+
+.ovalo {
+    width: 7px;
+    height: 30px;
+    background-color: #561804;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+}
+
+.ovalo[data-index="1"] { top: 6px; left: 20px; transform: rotate(25deg); }
+.ovalo[data-index="2"] { top: 10px; left: 23px; transform: rotate(40deg); }
+.ovalo[data-index="3"] { top: 18px; left: 26px; transform: rotate(55deg); }
+.ovalo[data-index="4"] { top: 24px; left: 30px; transform: rotate(70deg); }
+.ovalo[data-index="5"] { top: 30px; left: 35px; transform: rotate(80deg); }
